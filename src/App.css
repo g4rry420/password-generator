@@ -14,6 +14,7 @@
     padding: 40px 15px;
     color: white;
     opacity: 0.8;
+    margin-top: 70px;
 }
 .password-gen-container > div:nth-child(1){
     border-bottom: 3px solid white;
@@ -195,4 +196,49 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 700px){
+    .main-container{
+        width: 100%;
+    }
+    .heading-container h1{
+        font-size: 21px;
+    }
+    .password-gen-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .password-gen-container div .password{
+        font-size: 22px;
+    }
+    .password-gen-container .reset-pass{
+        margin-right: 20px;
+        height: 37px;
+        width: 37px;
+    }
+    .password-gen-container .copy-pass{
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+    .password-gen-container > div:nth-child(1){
+        flex-direction: column;
+        border: none;
+    }
+    .password-gen-container > div:nth-child(1) > div:nth-child(2){
+        margin-top: 45px;
+    }
+    .checkbox-container{
+        font-size: 15px;
+    }
+    .credentials-container p{
+        font-size: 1rem;
+    }
+    .slide-container{
+        width: 100%;
+    }
+    .range-value{
+        font-size: 10px;
+    }
 }
