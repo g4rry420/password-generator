@@ -13,7 +13,7 @@
     background-color: #339933;
     padding: 40px 15px;
     color: white;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .password-gen-container > div:nth-child(1){
     border-bottom: 3px solid white;
