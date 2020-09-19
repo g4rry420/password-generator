@@ -52,7 +52,7 @@ function App() {
     }else if(slideValue < 6 || slideValue === 6){
       passwordContainerRef.current.style.backgroundColor = "#c81a00";
       setLabel("Bad");
-    }else if(slideValue < 47){
+    }else if(slideValue < 40){
       passwordContainerRef.current.style.backgroundColor = " #339933";
       setLabel("Strong");
       labelIconRef.current.style.backgroundPosition = "initial";
@@ -192,9 +192,9 @@ function App() {
           </label>
 
           <div className="slide-container">
-            <p>Password Length (4-47)</p>
+            <p>Password Length (4-40)</p>
             <div ref={divValueRef} className="range-value">{slideValue}</div>
-            <input ref={slideValueRef} onChange={slideChanger} className="slide-range" step="1" type="range" min="4" max="47" value={slideValue}  />
+            <input ref={slideValueRef} onChange={slideChanger} className="slide-range" step="1" type="range" min="4" max="40" value={slideValue}  />
           </div>
         </div>
       </div>
