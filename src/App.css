@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+.main-container{
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 1px 2px 10px 1px #F4C724;
+    border: 1px solid #F4C724;
+}
+.main-container .heading-container{
+    text-align: center;
+    color: #4ba1de;
+}
+.password-gen-container{
+    background-color: #339933;
+    padding: 40px 15px;
+    color: white;
+    opacity: 0.9;
+}
+.password-gen-container > div:nth-child(1){
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-gen-container div div{
+    display: inline-block;
+}
+.password-gen-container div .password{
+    display: inline-block;
+    font-size: 2rem;
+}
+.password-gen-container .copy-pass{
+    background: #fdd572;
+    color: #333;
+    padding: 11px 19px;
+    font-size: 1.1rem;
+    margin-bottom: 9px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.password-gen-container .copy-pass:hover{
+    background-color: #fcc34f;
+}
+.labels-container{
+    display: flex;
+}
+.labels-container span{
+    margin-top: 8px;
+}
+.labels-container .pass-label-icon{
+    background-image: url("https://static.nortoncdn.com/idscp/images/v2/portal/homepage/strength.svg");
+    /* background-position: 20px 0px; */
+}
+.credentials-container p{
+    font-size: 1.1rem;
+}
+.credentials-container{
+    padding: 25px;
+}
+.slide-container{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.slide-container .slide-range{
+    -moz-appearance: none;
+    border-radius: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.17);
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+    background-color: #b6b6b6;
+}
+.slide-container .slide-range::-moz-range-thumb{
+    background-color: #007eb6;
+    border: solid 1px rgb(24, 187, 243);
+    height: 30px;
+    width: 30px; 
+    border-radius: 17px;   
+}
+.password-gen-container .reset-pass{
+    background-image: url("https://identitysafe.norton.com/content/images/refresh-copy.svg");
+    height: 47px;
+    width: 43px;
+}
+.password-gen-container > div:nth-child(1) > div:nth-child(2) {
+    display: flex;
+    cursor: pointer;
+}
+.password-gen-container .icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.range-value{
+    position: absolute;
+    color: white;
+    font-size: 0.9vw;
+    bottom: 2%;
+}
+.range-value span{
+    width: 30px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #03a9f4;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 6px;
+}
+.range-value span:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #03a9f4;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
-
-.App-link {
-  color: #61dafb;
+/* Create a custom checkbox */
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #007eb6;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
